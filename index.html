@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Janneke Van Laar-Huijsers | Online Cursus</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #FAFAF9;
+            color: #1a1a1a;
+            line-height: 1.6;
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+            background: linear-gradient(135deg, #F97316 0%, #EA580C 50%, #C2410C 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 70%);
+            animation: float 15s infinite ease-in-out;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(30px, -30px); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 700px;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            backdrop-filter: blur(10px);
+            padding: 0.5rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.5px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.1;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            margin-bottom: 2rem;
+            max-width: 550px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #EA580C;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        .cta-sub {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            opacity: 0.85;
+        }
+
+        /* FEATURES */
+        .features {
+            padding: 5rem 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-sub {
+            text-align: center;
+            color: #666;
+            font-size: 1.05rem;
+            margin-bottom: 3rem;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-card p {
+            color: #555;
+            font-size: 0.95rem;
+        }
+
+        /* PRICING */
+        .pricing {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: white;
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        .pricing .section-title {
+            color: white;
+        }
+
+        .pricing .section-sub {
+            color: rgba(255,255,255,0.7);
+        }
+
+        .price-card {
+            background: rgba(255,255,255,0.08);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 20px;
+            padding: 3rem 2rem;
+            max-width: 420px;
+            margin: 0 auto;
+        }
+
+        .price-amount {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #F97316;
+        }
+
+        .price-amount span {
+            font-size: 1.2rem;
+            color: rgba(255,255,255,0.6);
+        }
+
+        .price-period {
+            color: rgba(255,255,255,0.6);
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+        }
+
+        .price-features {
+            list-style: none;
+            text-align: left;
+            margin-bottom: 2rem;
+        }
+
+        .price-features li {
+            padding: 0.6rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.95rem;
+            color: rgba(255,255,255,0.9);
+        }
+
+        .price-features li::before {
+            content: '✓ ';
+            color: #F97316;
+            font-weight: 700;
+            margin-right: 0.5rem;
+        }
+
+        .cta-button-dark {
+            display: inline-block;
+            background: #F97316;
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            width: 100%;
+            box-shadow: 0 10px 30px rgba(249,115,22,0.3);
+        }
+
+        .cta-button-dark:hover {
+            background: #EA580C;
+            transform: translateY(-2px);
+        }
+
+        .free-trial-badge {
+            display: inline-block;
+            background: #22c55e;
+            color: white;
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        /* ABOUT */
+        .about {
+            padding: 5rem 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            color: #444;
+            line-height: 1.8;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #999;
+            font-size: 0.85rem;
+            border-top: 1px solid #eee;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+            .price-amount {
+                font-size: 2.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">🎓 Nieuwe Cursus</div>
+            <h1>Janneke Van Laar-Huijsers</h1>
+            <p>Leer op jouw tempo met meer dan 30 minuten aan waardevolle video-inhoud.</p>
+            <a href="#pricing" class="cta-button">Start Gratis Proefperiode</a>
+            <p class="cta-sub">7 dagen gratis · Geen verplichting · Opzeggen wanneer je wil</p>
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="features">
+        <h2 class="section-title">Waarom deze cursus?</h2>
+        <p class="section-sub">Alles wat je nodig hebt, op één plek.</p>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🎬</div>
+                <h3>30+ Minuten Video</h3>
+                <p>Praktische videolessen die je stap voor stap meenemen.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📱</div>
+                <h3>Kijk Overal</h3>
+                <p>Volg de cursus op je telefoon, tablet of laptop — waar je ook bent.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔄</div>
+                <h3>Je Eigen Tempo</h3>
+                <p>Geen deadlines. Kijk, pauzeer en herhaal wanneer jij wil.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💰</div>
+                <h3>Betaalbaar</h3>
+                <p>Slechts €6,99 per maand met een gratis proefperiode van 7 dagen.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔒</div>
+                <h3>Veilig Betalen</h3>
+                <p>Veilig en eenvoudig online betalen. Opzeggen wanneer je wil.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">✨</div>
+                <h3>Direct Toegang</h3>
+                <p>Direct na aanmelding krijg je toegang tot alle content.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING -->
+    <section class="pricing" id="pricing">
+        <h2 class="section-title">Begin Vandaag</h2>
+        <p class="section-sub">7 dagen volledig gratis. Daarna slechts een paar euro per maand.</p>
+
+        <div class="price-card">
+            <div class="free-trial-badge">🎁 7 dagen gratis</div>
+            <div class="price-amount">€6,99 <span>/maand</span></div>
+            <p class="price-period">na de gratis proefperiode</p>
+            <ul class="price-features">
+                <li>Volledige toegang tot alle video's</li>
+                <li>30+ minuten aan content</li>
+                <li>Kijken op elk apparaat</li>
+                <li>Je eigen leertempo</li>
+                <li>Direct starten na aanmelding</li>
+                <li>Altijd opzegbaar</li>
+            </ul>
+            <a href="#" class="cta-button-dark">Start Je Gratis Proefperiode</a>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about">
+        <h2 class="section-title">Over Janneke</h2>
+        <p class="about-text">
+            Janneke Van Laar-Huijsers deelt haar kennis en ervaring via deze online cursus. 
+            Met praktische videolessen helpt ze jou om op een laagdrempelige manier te leren 
+            — wanneer het jou uitkomt, op jouw tempo.
+        </p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Janneke Van Laar-Huijsers. Alle rechten voorbehouden.</p>
+    </footer>
+
+</body>
+</html>
