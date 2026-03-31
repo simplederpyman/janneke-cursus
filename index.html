@@ -15,8 +15,8 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            background: #FAFAF9;
-            color: #1a1a1a;
+            background: #FFFFFF;
+            color: #434343;
             line-height: 1.6;
         }
 
@@ -28,7 +28,7 @@
             justify-content: center;
             text-align: center;
             padding: 2rem;
-            background: linear-gradient(135deg, #F97316 0%, #EA580C 50%, #C2410C 100%);
+            background: linear-gradient(135deg, #A7144C 0%, #8a0f3e 50%, #6d0b30 100%);
             color: white;
             position: relative;
             overflow: hidden;
@@ -41,7 +41,7 @@
             left: -50%;
             width: 200%;
             height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(255,255,255,0.06) 0%, transparent 70%);
             animation: float 15s infinite ease-in-out;
         }
 
@@ -87,7 +87,7 @@
         .cta-button {
             display: inline-block;
             background: white;
-            color: #EA580C;
+            color: #A7144C;
             padding: 1rem 2.5rem;
             border-radius: 50px;
             font-size: 1.1rem;
@@ -120,6 +120,7 @@
             font-size: 2rem;
             font-weight: 700;
             margin-bottom: 0.5rem;
+            color: #434343;
         }
 
         .section-sub {
@@ -136,10 +137,10 @@
         }
 
         .feature-card {
-            background: white;
+            background: #F4F4F4;
             border-radius: 16px;
             padding: 2rem;
-            box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.04);
             transition: transform 0.3s ease;
         }
 
@@ -156,6 +157,7 @@
             font-size: 1.15rem;
             font-weight: 600;
             margin-bottom: 0.5rem;
+            color: #434343;
         }
 
         .feature-card p {
@@ -165,43 +167,35 @@
 
         /* PRICING */
         .pricing {
-            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
-            color: white;
+            background: #F4F4F4;
+            color: #434343;
             padding: 5rem 2rem;
             text-align: center;
         }
 
-        .pricing .section-title {
-            color: white;
-        }
-
-        .pricing .section-sub {
-            color: rgba(255,255,255,0.7);
-        }
-
         .price-card {
-            background: rgba(255,255,255,0.08);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.15);
+            background: white;
+            border: 2px solid #A7144C;
             border-radius: 20px;
             padding: 3rem 2rem;
             max-width: 420px;
             margin: 0 auto;
+            box-shadow: 0 10px 40px rgba(167,20,76,0.1);
         }
 
         .price-amount {
             font-size: 3.5rem;
             font-weight: 700;
-            color: #F97316;
+            color: #A7144C;
         }
 
         .price-amount span {
             font-size: 1.2rem;
-            color: rgba(255,255,255,0.6);
+            color: #888;
         }
 
         .price-period {
-            color: rgba(255,255,255,0.6);
+            color: #888;
             margin-bottom: 1.5rem;
             font-size: 1rem;
         }
@@ -214,21 +208,21 @@
 
         .price-features li {
             padding: 0.6rem 0;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
+            border-bottom: 1px solid #eee;
             font-size: 0.95rem;
-            color: rgba(255,255,255,0.9);
+            color: #434343;
         }
 
         .price-features li::before {
             content: '✓ ';
-            color: #F97316;
+            color: #A7144C;
             font-weight: 700;
             margin-right: 0.5rem;
         }
 
         .cta-button-dark {
             display: inline-block;
-            background: #F97316;
+            background: #A7144C;
             color: white;
             padding: 1rem 2.5rem;
             border-radius: 50px;
@@ -237,17 +231,17 @@
             text-decoration: none;
             transition: all 0.3s ease;
             width: 100%;
-            box-shadow: 0 10px 30px rgba(249,115,22,0.3);
+            box-shadow: 0 10px 30px rgba(167,20,76,0.25);
         }
 
         .cta-button-dark:hover {
-            background: #EA580C;
+            background: #8a0f3e;
             transform: translateY(-2px);
         }
 
         .free-trial-badge {
             display: inline-block;
-            background: #22c55e;
+            background: #A7144C;
             color: white;
             padding: 0.4rem 1rem;
             border-radius: 50px;
@@ -266,7 +260,7 @@
 
         .about-text {
             font-size: 1.1rem;
-            color: #444;
+            color: #434343;
             line-height: 1.8;
         }
 
@@ -277,6 +271,7 @@
             color: #999;
             font-size: 0.85rem;
             border-top: 1px solid #eee;
+            background: #F4F4F4;
         }
 
         /* RESPONSIVE */
@@ -370,8 +365,8 @@
     <section class="about">
         <h2 class="section-title">Over Janneke</h2>
         <p class="about-text">
-            Janneke van Laar-Huijser leert je de kunst van het botanisch tekenen. 
-            Met praktische videolessen helpt ze jou om op een laagdrempelige manier te leren 
+            Janneke van Laar-Huijser is botanisch kunstenaar en lid van de Vereniging Botanisch Kunstenaars Nederland. 
+            Met praktische videolessen helpt ze jou om op een laagdrempelige manier botanisch tekenen te leren 
             — wanneer het jou uitkomt, op jouw tempo.
         </p>
     </section>
@@ -383,7 +378,7 @@
             Heb je al gekocht? Check je email voor toegang, of ga direct naar de cursus:
         </p>
         <br>
-        <a href="https://cursusplatform-jannekevanlaar.systeme.io/school/course/botanisch-tekenen" class="cta-button" target="_blank" style="background: #F97316; color: white;">Ga naar de Cursus</a>
+        <a href="https://cursusplatform-jannekevanlaar.systeme.io/school/course/botanisch-tekenen" class="cta-button-dark" target="_blank">Ga naar de Cursus</a>
     </section>
 
     <!-- FOOTER -->
